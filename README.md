@@ -18,7 +18,7 @@ The module contains the ```CellScatterPredictor``` class, which should be import
 To make predictions, create an instance of the class and call the ```.predict``` function:
 ![](https://github.com/PPeltola/CellScatter-predictor/blob/main/documentation/images/predict1.png)
 
-The data given as the parameter should be a one-dimensional vector of 1000 values, at least python lists, NumPy arrays and pandas Series work fine.
+The data given as the parameter should be a one-dimensional vector of 1000 values, at least regular Python lists, NumPy arrays and pandas Series work fine.
 
 
 The ```.predict``` function returns a dictionary of the predicted values, where the keys are ```density```, ```thickness``` and ```APL```:
@@ -28,3 +28,9 @@ The ```.predict``` function returns a dictionary of the predicted values, where 
 The ```thickness``` and ```APL``` have single-value predictions, but the ```density``` values contain 200 (x, y) pairs from the predicted density:
 
 ![](https://github.com/PPeltola/CellScatter-predictor/blob/main/documentation/images/density1.png)
+
+The different properties can also be predicted separately, and the printing/plotting during prediction can be silenced by using the ```print_text=False``` and ```plot=False``` parameters.
+
+![](https://github.com/PPeltola/CellScatter-predictor/blob/main/documentation/images/preds2.png)
+
+These silencing parameters can also be given to the ```.predict``` function as well.
