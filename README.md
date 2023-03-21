@@ -10,4 +10,6 @@ MVP implementation of the tool developed by the CellScatter group for the Univer
 
 ## How to use
 
-TODO as well
+The module contains the ```CellScatterPredictor``` class, which should be imported: ```from cellscatter_predictor import CellScatterPredictor```.
+
+
