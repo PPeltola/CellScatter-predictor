@@ -1,11 +1,11 @@
 # CellScatter Predictor
 
-MVP implementation of the tool developed by the CellScatter group for the University of Helsinki Data Science Project (spring -23) course. Some project notebooks used to develop the machine learning models used in the tool can be found [here](https://github.com/K123AsJ0k1/CellScatter). The goal is to eventually make this tool available on PyPI, but the current MVP version is only available here as a download.
+MVP implementation of the tool developed by the CellScatter group for the University of Helsinki Data Science Project (spring -23) course. Some project notebooks used to develop the machine learning models used in the tool can be found [here](https://github.com/K123AsJ0k1/CellScatter). The goal is to eventually make this tool available on PyPI as well, but the current MVP version is only available here as a download.
 
 
 ## Installation
  
- TODO
+ Either clone the repository or download a copy from the latest GitHub release. The dependencies can be installed using pip by running ```pip install -r requirements.txt``` in the project root folder. Creating a Python virtual environment where you install the denpendencies to might be a good idea.
 
 
 ## How to use
