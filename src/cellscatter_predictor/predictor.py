@@ -15,8 +15,10 @@ class CellScatterPredictor:
                  apl_pickle="apl.pkl",
                  density_stats_pickle="density_stats.pkl",
                  density_model="MVP_TD_model.h5"):
+                 
+        location = os.path.dirname(os.path.abspath(__file__))
         
-        with open(thickness_pickle, 'rb') as f:
+        with open(os.path.join(location, thickness_pickle), 'rb') as f:
             thickness_data = pickle.load(f)
             self.thi_formfactor_mean = thickness_data['formfactor_mean']
             self.thi_formfactor_std = thickness_data['formfactor_std']
@@ -24,7 +26,7 @@ class CellScatterPredictor:
             self.thickness_std = thickness_data['thickness_std']
             self.thickness_model = thickness_data['model']
             
-        with open(apl_pickle, 'rb') as f:
+        with open(os.path.join(location, apl_pickle), 'rb') as f:
             apl_data = pickle.load(f)
             self.apl_formfactor_mean = apl_data['formfactor_mean']
             self.apl_formfactor_std = apl_data['formfactor_std']
@@ -33,14 +35,14 @@ class CellScatterPredictor:
             self.apl_model = apl_data['model']
             
         
-        with open(density_stats_pickle, 'rb') as f:
+        with open(os.path.join(location, density_stats_pickle), 'rb') as f:
             density_stats = pickle.load(f)
             self.density_formfactor_mean = density_stats['formfactor_mean']
             self.desnity_formfactor_std = density_stats['formfactor_std']
             self.density_y_mean = density_stats['TD_y_mean']
             self.density_y_std = density_stats['TD_y_std']
             self.density_x_std = density_stats['TD_x_std']
-            self.density_model = keras.models.load_model(density_model)
+            self.density_model = keras.models.load_model(os.path.join(location, density_model))
         
         self.quantiles = [0.5, 0.25, 0.05]
     

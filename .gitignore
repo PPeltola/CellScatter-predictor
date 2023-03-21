@@ -1,5 +1,5 @@
 pyproject.toml
-
+__pycache__*
 .git/
 venv/
 tests/
