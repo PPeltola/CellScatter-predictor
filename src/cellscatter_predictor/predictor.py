@@ -98,10 +98,10 @@ class CellScatterPredictor:
         return pred
     
     def predict_density(self,
-                       formfactor,
-                       print_text=True,
-                       plot=True,
-                       ff_name=None):
+                        formfactor,
+                        print_text=True,
+                        plot=True,
+                        ff_name=None):
         
         pred = self.density_model(
             self._normalize(formfactor,
