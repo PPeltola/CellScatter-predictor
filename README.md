@@ -33,4 +33,6 @@ The different properties can also be predicted separately, and the printing/plot
 
 ![](https://github.com/PPeltola/CellScatter-predictor/blob/main/documentation/images/preds2.png)
 
-These silencing parameters can be given to the ```.predict``` function as well.
+These silencing parameters can be given to the ```.predict``` function as well:
+
+![](https://github.com/PPeltola/CellScatter-predictor/blob/main/documentation/images/predict2.png)
