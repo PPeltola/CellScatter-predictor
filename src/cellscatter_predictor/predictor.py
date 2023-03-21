@@ -99,7 +99,6 @@ class CellScatterPredictor:
     
     def predict_density(self,
                         formfactor,
-                        print_text=True,
                         plot=True,
                         ff_name=None):
         
@@ -125,14 +124,13 @@ class CellScatterPredictor:
     
     def predict(self,
                 formfactor,
+                plot=True,
                 print_text=True,
-                plot_density=True,
                 ff_name=None):
         
         density_pred = self.predict_density(
             formfactor,
-            print_text,
-            plot_density,
+            plot,
             ff_name
         )
         
