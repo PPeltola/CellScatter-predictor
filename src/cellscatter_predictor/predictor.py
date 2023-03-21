@@ -114,8 +114,8 @@ class CellScatterPredictor:
         if plot:
             plt.plot(pred_xs, pred_ys, color='b')
             plt.xlim(pred_xs[0], pred_xs[199])
-            plt.xlabel('x')
-            plt.ylabel('y')
+            plt.xlabel('z (nm)')
+            plt.ylabel('e / nm³')
             plt.title('Predicted density of ' + str(ff_name)) if ff_name else plt.title('Predicted density')
             plt.show()
             
