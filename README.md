@@ -5,7 +5,7 @@ MVP implementation of the tool developed by the CellScatter group for the Univer
 
 ## Installation
  
- Either clone the repository or download a copy from the latest GitHub release. The dependencies can be installed using pip by running ```pip install -r requirements.txt``` in the project root folder. Creating a Python virtual environment where you install the denpendencies to might be a good idea.
+Clone the repository from GitHub. The dependencies can be installed using pip by running ```pip install -r requirements.txt``` in the project root folder. Creating a Python virtual environment where you install the denpendencies to might be a good idea.
 
 
 ## How to use
