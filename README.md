@@ -1,6 +1,6 @@
 # CellScatter Predictor
 
-MVP implementation of the tool developed by the CellScatter group for the University of Helsinki Data Science Project (spring -23) course. Some project notebooks used to develop the machine learning models used in the tool can be found [here](https://github.com/K123AsJ0k1/CellScatter).
+MVP implementation of the tool developed by the CellScatter group for the University of Helsinki Data Science Project (spring -23) course. Some project notebooks used to develop the machine learning models used in the tool can be found [here](https://github.com/K123AsJ0k1/CellScatter). The goal is to eventually make this tool available on PyPI, but the current MVP version is only available here as a download.
 
 
 ## Installation
@@ -33,4 +33,4 @@ The different properties can also be predicted separately, and the printing/plot
 
 ![](https://github.com/PPeltola/CellScatter-predictor/blob/main/documentation/images/preds2.png)
 
-These silencing parameters can also be given to the ```.predict``` function as well.
+These silencing parameters can be given to the ```.predict``` function as well.
