@@ -1,5 +1,7 @@
 pyproject.toml
 __pycache__*
+.ipynb_checkpoints*
 .git/
 venv/
 tests/
+src/CellScatter_Predictor.egg-info/
