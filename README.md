@@ -5,7 +5,14 @@ MVP implementation of the tool developed by the CellScatter group for the Univer
 
 ## Installation
  
-Clone the repository from GitHub. The dependencies can be installed using pip by running ```pip install -r requirements.txt``` in the project root folder. It's **very much recommended** to create a Python virtual environment where you install the denpendencies and the module, since the dependencies include very large packages such as TensorFlow. To install the module to your (virtual) environment, run ```pip install -e src``` in the project root folder.
+Clone the repository from GitHub. The dependencies can be installed using pip by running ```pip install -r requirements.txt``` in the project root folder. It's **very much recommended** to create a Python virtual environment where you install the denpendencies and the module, since the dependencies include very large packages such as TensorFlow.
+
+
+## Running the example notebook
+
+The repository includes a Jupyter notebook with the code for the example use cases shown below. The example also includes 583 form factors to play around with. These form factors are from the model training data set, so predicting these will give unrealistically good results.
+
+To try out the example notebook, simply run ```jupyter-lab``` (from the virtual environment) after installing the requirements in your virtual environment. Jupyterlab is included in the installed requirements.
 
 
 ## How to use
