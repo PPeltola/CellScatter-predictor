@@ -37,7 +37,7 @@ class CellScatterPredictor:
         with open(os.path.join(location, density_stats_pickle), 'rb') as f:
             density_stats = pickle.load(f)
             self.density_formfactor_mean = density_stats['formfactor_mean']
-            self.desnity_formfactor_std = density_stats['formfactor_std']
+            self.density_formfactor_std = density_stats['formfactor_std']
             self.density_y_mean = density_stats['TD_y_mean']
             self.density_y_std = density_stats['TD_y_std']
             self.density_x_std = density_stats['TD_x_std']
@@ -104,7 +104,7 @@ class CellScatterPredictor:
         pred = self.density_model(
             self._normalize(formfactor,
                             self.density_formfactor_mean,
-                            self.density_formfactor_mean)
+                            self.density_formfactor_std)
             .reshape(1, -1)
         )
         
