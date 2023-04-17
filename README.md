@@ -10,9 +10,9 @@ Clone the repository from GitHub. The dependencies can be installed using pip by
 
 ## Running the example notebook
 
-The repository includes a Jupyter notebook with the code for the example use cases shown below. The example also includes 583 form factors to play around with. These form factors are from the model training data set, so predicting these will give unrealistically good results.
+The repository includes two Jupyter notebook with example code: one showing the example use cases shown below and one with code for handling the experimental formfactor data.
 
-To try out the example notebook, simply run ```jupyter-lab``` (from the virtual environment) after installing the requirements in your virtual environment. Jupyterlab is included in the installed requirements.
+To try out the example notebooks, simply run ```jupyter-lab``` (from the virtual environment) after installing the requirements in your virtual environment. Jupyterlab is included in the installed requirements. The notebooks and all the data files used in the notebooks are found in the ```notebooks``` folder.
 
 
 ## How to use
