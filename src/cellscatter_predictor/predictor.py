@@ -13,7 +13,7 @@ class CellScatterPredictor:
                  thickness_pickle="thickness.pkl", 
                  apl_pickle="apl.pkl",
                  density_stats_pickle="density_stats.pkl",
-                 density_model="MVP_TD_model.h5"):
+                 density_model="Final_FF_to_TD.h5"):
                  
         location = os.path.dirname(os.path.abspath(__file__))
         
