@@ -59,15 +59,20 @@ class CellScatterPredictor:
         print()
     
     def predict_thickness(self,
-                          formfactor, 
+                          formfactor,
+                          constant_normalization=True,
                           print_text=True):
         
+        if constant_normalization:
+            normalized_ff = self._normalize(formfactor, self.thi_formfactor_mean, self.thi_formfactor_std)
+        else:
+            normalized_ff = self._normalize(formfactor, np.mean(formfactor), np.std(formfactor))
+
         pred, pis = self.thickness_model.predict(
-            [self._normalize(formfactor, 
-                             self.thi_formfactor_mean, 
-                             self.thi_formfactor_std)], 
+            [normalized_ff], 
             alpha=self.quantiles
         )
+        
         
         pred = self._denormalize(pred[0], self.thickness_mean, self.thickness_std)
         pis = self._denormalize(pis[0], self.thickness_mean, self.thickness_std)
@@ -78,13 +83,17 @@ class CellScatterPredictor:
         return pred
     
     def predict_apl(self,
-                    formfactor, 
+                    formfactor,
+                    constant_normalization=True,
                     print_text=True):
         
+        if constant_normalization:
+            normalized_ff = self._normalize(formfactor, self.apl_formfactor_mean, self.apl_formfactor_std)
+        else:
+            normalized_ff = self._normalize(formfactor, np.mean(formfactor), np.std(formfactor))
+
         pred, pis = self.apl_model.predict(
-            [self._normalize(formfactor, 
-                             self.apl_formfactor_mean, 
-                             self.apl_formfactor_std)], 
+            [normalized_ff], 
             alpha=self.quantiles
         )
         
@@ -98,15 +107,16 @@ class CellScatterPredictor:
     
     def predict_density(self,
                         formfactor,
+                        constant_normalization=True,
                         plot=True,
                         ff_name=None):
         
-        pred = self.density_model(
-            self._normalize(formfactor,
-                            self.density_formfactor_mean,
-                            self.density_formfactor_std)
-            .reshape(1, -1)
-        )
+        if constant_normalization:
+            normalized_ff = self._normalize(formfactor, self.density_formfactor_mean, self.density_formfactor_std)
+        else:
+            normalized_ff = self._normalize(formfactor, np.mean(formfactor), np.std(formfactor))
+
+        pred = self.density_model(np.array(normalized_ff).reshape(1, -1))
         
         pred_xs = self._denormalize(pred[0][:200], 0, self.density_x_std)
         pred_ys = self._denormalize(pred[0][200:], self.density_y_mean, self.density_y_std) + 333.3
